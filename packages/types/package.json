@@ -1,0 +1,23 @@
+{
+  "name": "@fx-settlement-engine/types",
+  "version": "1.0.0",
+  "description": "Shared types for fx-settlement-engine",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -p tsconfig.json --watch",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  }
+}

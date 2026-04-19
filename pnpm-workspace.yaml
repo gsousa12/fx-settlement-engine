@@ -1,5 +1,10 @@
 packages:
-  - 'apps/*'
-  - 'packages/*'
-  - 'services/*'
-  - 'jobs/*'
+  - apps/*
+  - packages/*
+  - services/*
+  - jobs/*
+
+onlyBuiltDependencies:
+  - '@nestjs/core'
+  - esbuild
+  - unrs-resolver

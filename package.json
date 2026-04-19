@@ -2,11 +2,18 @@
   "name": "fx-settlement-engine",
   "version": "1.0.0",
   "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "private": true,
   "license": "ISC",
-  "packageManager": "pnpm@10.28.1"
+  "packageManager": "pnpm@10.28.1",
+  "scripts": {
+    "build": "tsc --build tsconfig.json",
+    "build:watch": "tsc --build tsconfig.json --watch",
+    "clean": "tsc --build tsconfig.json --clean",
+    "gateway:dev": "pnpm --filter @fx-settlement-engine/gateway start:dev",
+    "gateway:build": "pnpm --filter @fx-settlement-engine/gateway build",
+    "db:generate": "pnpm --filter @fx-settlement-engine/db db:generate",
+    "db:migrate": "pnpm --filter @fx-settlement-engine/db db:migrate",
+    "db:push": "pnpm --filter @fx-settlement-engine/db db:push",
+    "db:studio": "pnpm --filter @fx-settlement-engine/db db:studio"
+  }
 }
